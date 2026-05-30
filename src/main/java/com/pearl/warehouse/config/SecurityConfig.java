@@ -57,6 +57,7 @@ public class SecurityConfig {
                         //.requestMatchers("/products/**").hasAuthority("ADMIN")
                         .requestMatchers("/products/**").permitAll()
                         .requestMatchers("/stock/**").permitAll()
+                        .requestMatchers("/api/customers/**").permitAll()
                         .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                         .anyRequest().authenticated()
 
