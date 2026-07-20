@@ -16,7 +16,7 @@ import java.time.OffsetDateTime;
 @AllArgsConstructor
 @Entity
 @Table(name = "practitioners")
-public class Practitioner implements Serializable {
+public class  Practitioner implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
