@@ -1,5 +1,6 @@
 package com.pearl.warehouse.model;
 
+import com.pearl.warehouse.exceptions.enums.RoomType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -22,7 +23,8 @@ public class Room implements Serializable {
 
     private String roomNo;
 
-    private String roomType;
+    @Enumerated(EnumType.STRING)
+    private RoomType roomType;
 
-    private String status;
+    private Boolean status;
 }

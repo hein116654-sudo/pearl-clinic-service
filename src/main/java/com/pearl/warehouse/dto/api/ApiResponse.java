@@ -62,11 +62,12 @@ public class ApiResponse<T> {
     public void setPagination(Pagination pagination) {
         this.pagination = pagination;
     }
-
+    public Pagination getPagination(){
+        return this.pagination;
+    }
     public boolean isSuccess() { return success; }
     public String getStatus() { return status; }
     public String getMessage() { return message; }
     public T getContent() { return content; }
     public List<FieldError> getErrors() { return errors; }
 }
-
