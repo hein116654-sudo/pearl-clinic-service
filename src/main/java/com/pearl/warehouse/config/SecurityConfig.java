@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -55,7 +56,7 @@ public class SecurityConfig {
                        .requestMatchers("/api/users/**").permitAll()
                         .requestMatchers("/categories/**").permitAll()//.hasAuthority("USER")
                         //.requestMatchers("/products/**").hasAuthority("ADMIN")
-                        .requestMatchers("/api/specializations/**").permitAll()
+                        .requestMatchers("/specializations/**").permitAll()
                         .requestMatchers("/practitioners/**").permitAll()
                         .requestMatchers("/patients/**").permitAll()
                         .requestMatchers("/patientAllergies/**").permitAll()

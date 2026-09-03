@@ -31,8 +31,8 @@ public class PatientAllergy implements Serializable {
 
     @Enumerated(EnumType.STRING)
     private Allergen status;
-
-    private String drug_family;
+    @Column(name="drug_family")
+    private String drugFamily;
 
     private String reaction;
 

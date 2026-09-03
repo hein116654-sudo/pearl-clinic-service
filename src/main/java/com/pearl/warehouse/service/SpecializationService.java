@@ -52,6 +52,8 @@ public class SpecializationService {
             throw new ResourceAlreadyExistsException("Specialization Already Exists!!");
         }
         optionalSpecialization.setName(input.name());
+        optionalSpecialization.setDescription(input.description());
+        optionalSpecialization.setStatus(input.status());
         specializationRepository.save(optionalSpecialization);
         return mapper.toResponse(optionalSpecialization);
     }

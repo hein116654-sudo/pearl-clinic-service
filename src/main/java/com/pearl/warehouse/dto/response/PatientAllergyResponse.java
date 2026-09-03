@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 @NoArgsConstructor
 public class PatientAllergyResponse {
     private Long id;
+    private Long patientId;
     private String patientName;
     private String allergenName;
     private Allergen status;

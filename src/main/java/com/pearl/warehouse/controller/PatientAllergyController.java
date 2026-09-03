@@ -24,8 +24,9 @@ public class PatientAllergyController {
     }
 
     @PostMapping("/create")
-    public PatientAllergyResponse create(@RequestBody CreatePatientAllergyInput input){
-        return patientAllergyService.createPatientAllergy(input);
+    public ResponseEntity<PatientAllergyResponse> create(@RequestBody CreatePatientAllergyInput input){
+       PatientAllergyResponse allergen= patientAllergyService.createPatientAllergy(input);
+       return ResponseEntity.ok(allergen);
     }
 
     @GetMapping("/getById/{id}")

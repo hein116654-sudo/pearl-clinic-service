@@ -24,7 +24,6 @@ public class PatientAllergyService {
 
     public PatientAllergyResponse createPatientAllergy(CreatePatientAllergyInput input){
         PatientAllergy patientAllergy=patientAllergyMapper.toEntity(input);
-
         Patient patient= patientRepository.findById(input.patientId()).orElseThrow(()->new ResourceNotFoundException("Patient Not Found!!"));
         patientAllergy.setPatient(patient);
         patientAllergy.setRecordedAt(OffsetDateTime.now());

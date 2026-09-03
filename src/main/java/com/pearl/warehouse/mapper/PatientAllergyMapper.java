@@ -12,10 +12,12 @@ import org.mapstruct.MappingTarget;
 public interface PatientAllergyMapper {
     @Mapping(target="id",ignore=true)
     @Mapping(target="patient",ignore=true)
+    @Mapping(source = "drugFamily", target = "drugFamily")
     PatientAllergy toEntity(CreatePatientAllergyInput input);
 
 
     @Mapping(source="patient.name",target = "patientName")
+    @Mapping(source="patient.id",target="patientId")
     PatientAllergyResponse toResponse(PatientAllergy entity);
 
     @Mapping(target="id",ignore=true)
